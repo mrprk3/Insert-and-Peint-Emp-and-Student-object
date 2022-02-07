@@ -1,0 +1,56 @@
+package com.mrprk;
+public class Emp {
+    int eid;
+    String ename;
+    public Emp(int eid, String ename){
+    super();
+    this.eid=eid;
+    this.ename=ename;
+    }
+}
+
+
+
+
+
+package com.mrprk;
+public class Student {
+    int sid;
+    String sname;
+    public Student(int sid, String sname){
+    super();
+    this.sid=sid;
+    this.sname=sname;
+
+  }
+}
+
+
+
+package com.mrprk;
+import java.util.ArrayList;
+public class Test6 {
+    public static void main(String[] args) {
+        ArrayList<Emp>ar = new ArrayList<Emp>();
+        ar.add(new Emp(111,"Atim"));
+        ar.add(new Emp(121, "Binod"));
+        ar.add(new Emp(132, "Biswajit"));
+        ar.add(new Emp(162, "Amra"));
+        //System.out.println(ar); // [com.mrprk.Emp@3fee733d, com.mrprk.Emp@5acf9800, com.mrprk.Emp@4617c264, com.mrprk.Emp@36baf30c]
+        for(Emp e :ar){
+            System.out.println(e.eid+" "+e.ename);
+      
+        }
+        
+        System.out.println("---------------------------------------------");
+        
+        ArrayList <Student>all = new ArrayList<Student>();
+        all.add(new Student(101, "Ankush"));
+        all.add(new Student(102, "Dev"));
+        all.add(new Student(103, "Akash"));
+        
+        for(Student s:all){
+            System.out.println(s.sid+" "+s.sname);
+        }
+    }
+}
